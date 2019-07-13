@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @restaurant_event.event_id %>
+</p>
+
+<p>
+  <strong>Full:</strong>
+  <%= @restaurant_event.full %>
+</p>
+
+<p>
+  <strong>Amount of members:</strong>
+  <%= @restaurant_event.amount_of_members %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_event_path(@restaurant_event) %> |
+<%= link_to 'Back', restaurant_events_path %>

@@ -1,0 +1,2 @@
+module RestaurantEventsHelper
+end
