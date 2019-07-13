@@ -1,57 +1,59 @@
+<div class="container">
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+  <div id="error_explanation">
+  <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
       <ul>
       <% user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
-      </ul>
+        <% end %>
+        </ul>
+        </div>
+        <% end %>
+        
+        <div class="form-group">
+        <%= form.label :name %>
+        <input type="text" name="user[name]" id="user_name" class="form-control">
+        </div>
+        
+        <div class="form-group">
+        <%= form.label :email %>
+        <input type="text" name="user[email]" id="user_email" class="form-control">
+        </div>
+        
+        <div class="form-group">
+        <%= form.label :age %>
+        <input type="number" name="user[age]" id="user_age" class="form-control">
+        </div>
+        
+        <div class="form-group">
+        <%= form.label :gender %>
+        <input type="text" name="user[gender]" id="user_gender" class="form-control">        
+        </div>
+        
+        <div class="form-group">
+        <%= form.label :location %>
+        <input type="text" name="user[location]" id="user_location" class="form-control">
     </div>
+    
+  <div class="form-group">
+  <%= form.label :password %>
+  <input type="text" name="user[password]" id="user_password" class="form-control">
+    </div>
+  
+  <div class="form-group">
+  <%= form.label :fav_meal %>
+  <input type="text" name="user[fav_meal]" id="user_fav_meal" class="form-control">
+    </div>
+  
+  <div class="form-group">
+  <%= form.label :availability %>
+  <input type="text" name="user[availability]" id="user_availability" class="form-control">
+    </div>
+  
+  <button class="btn btn-success" type="submit">
+  Submit
+  </button>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
   </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
-  </div>
-
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
-  </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fav_meal %>
-    <%= form.text_field :fav_meal %>
-  </div>
-
-  <div class="field">
-    <%= form.label :availability %>
-    <%= form.text_field :availability %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
