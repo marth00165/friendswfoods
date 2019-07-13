@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_13_180050) do
+ActiveRecord::Schema.define(version: 2019_07_13_185917) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_07_13_180050) do
     t.integer "restaurant_event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "eventimg"
   end
 
   create_table "likeds", force: :cascade do |t|
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 2019_07_13_180050) do
     t.integer "restaurant_event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "restaurantimg"
   end
 
   create_table "user_events", force: :cascade do |t|
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_07_13_180050) do
     t.string "availability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "userimg"
   end
 
 end
