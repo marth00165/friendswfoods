@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'users#home'
   resources :restaurants
   resources :likeds
   resources :restaurant_events

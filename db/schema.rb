@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2019_07_13_185917) do
     t.string "name"
     t.integer "user_event_id"
     t.integer "restaurant_event_id"
+    t.boolean "full"
+    t.integer "amount_of_members"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "eventimg"
@@ -29,11 +31,7 @@ ActiveRecord::Schema.define(version: 2019_07_13_185917) do
   end
 
   create_table "restaurant_events", force: :cascade do |t|
-    t.string "name"
-    t.string "restaurant_location"
-    t.integer "event_id"
-    t.boolean "full"
-    t.integer "amount_of_members"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,7 +49,6 @@ ActiveRecord::Schema.define(version: 2019_07_13_185917) do
 
   create_table "user_events", force: :cascade do |t|
     t.string "user_id"
-    t.string "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
