@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <input type="text" name="restaurant[name]" class="form-control" id="restaurant_name">
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :cuisine %>
-    <%= form.text_field :cuisine %>
+    <input type="text" name="restaurant[cuisine]" class="form-control" id="restaurant_cuisine">
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :like_id %>
-    <%= form.number_field :like_id %>
+    <input type="number" name="restaurant[like_id]" class="form-control" id="restaurant_like_id">
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :zipcode %>
-    <%= form.number_field :zipcode %>
+    <input type="number" name="restaurant[zipcode]" class="form-control" id="restaurant_zipcode">
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :restaurant_event_id %>
-    <%= form.number_field :restaurant_event_id %>
+    <input type="number" name="restaurant[restaurant_event_id]" class="form-control" id="restaurant_restaurant_event_id">
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <button class="btn btn-success" type="submit">
+  Submit
+  </button>
 <% end %>

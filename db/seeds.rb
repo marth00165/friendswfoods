@@ -1,3 +1,6 @@
+User.delete_all
+Restaurant.delete_all
+Event.delete_all
 User.create(name: "Rohit", email:"rohitpratti@gmail.com", age:23, gender:"male", location: "Seattle", password:"abc", fav_meal: "Breakfast",availability: ["Friday","Saturday"])
 User.create(name: "Zema", email:"zemamail@zmail.com", age:300000, gender:"idc", location: "Seattle", password:"abc", fav_meal: "Dinner",availability: ["Saturday"])
 User.create(name: "Aliya", email:"aliya@gmail.com", age:26, gender:"female", location: "Seattle", password:"abc", fav_meal: "Lunch",availability: ["Monday","Tuesday"])
@@ -10,3 +13,7 @@ Restaurant.create(name:"El Borracho", cuisine:"Mexican", zipcode:98101)
 Restaurant.create(name:"Japonessa", cuisine:"Fusion", zipcode:98101)
 Restaurant.create(name:"Yard House", cuisine:"American", zipcode:98101)
 Restaurant.create(name:"Jasmine Thai", cuisine:"Thai", zipcode:98102)
+
+Event.create(name:"Hoppin Time", full:true, amount_of_members:5)
+Event.create(name:"Barbeque Brunch", full:false, amount_of_members:2)
+Event.create(name:"Fiesta at Chipotle", full:false, amount_of_members:4)

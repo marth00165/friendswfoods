@@ -1,6 +1,11 @@
+<%= stylesheet_link_tag "style.css" %>
+<div class="container">
+<div class="card rounded" style="width: 50rem; padding:20px; margin: 20px; background: white">
+  <div class="card-body">
+    <h1 class="card-title">Events
+</h1>
 <p id="notice"><%= notice %></p>
 
-<h1>Events</h1>
 
 <table>
   <thead>
@@ -16,8 +21,6 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
-        <td><%= event.user_event_id %></td>
-        <td><%= event.restaurant_event_id %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +31,7 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path %> |
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Home', root_path %> |
+<%= link_to 'Restaurants', restaurants_path %>
