@@ -1,6 +1,12 @@
+<%= stylesheet_link_tag "style.css" %>
+<div class="container">
+<div class="card rounded" style="width: 100%; padding:20px; margin:20px; background: white">
+  <div class="card-body">
+    <h1 class="card-title">Restaurants
+</h1>
 <p id="notice"><%= notice %></p>
 
-<h1>Restaurants</h1>
+
 
 <table>
   <thead>
@@ -19,11 +25,11 @@
       <tr>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.cuisine %></td>
-        <td><%= restaurant.like_id %></td>
+        <td><input type="checkbox" name="like" value="like"></td>
         <td><%= restaurant.zipcode %></td>
         <td><%= restaurant.restaurant_event_id %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Show', restaurant %></td> 
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td> 
         <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -32,4 +38,8 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'New Restaurant', new_restaurant_path %> |
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Home', root_path %> |
+<%= link_to 'Events', events_path %> |
+<%= link_to 'Save Likes', likeds_path %>

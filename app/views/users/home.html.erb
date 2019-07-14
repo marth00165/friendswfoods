@@ -1,6 +1,9 @@
+<%= stylesheet_link_tag "style.css" %>
 <div class="container" style="width: 450px">
-<img src="https://cdn.discordapp.com/attachments/599659573594423309/599723425203748864/FRIENDS-WITH-FOOD.png" style="width: 400px" />
+<img src="https://cdn.discordapp.com/attachments/599659573594423309/599731501273186306/big-logo.png" style="width: 400px" />
 <br>
-<button class="btn btn-info" >Login</button>
-<button class="btn btn-success">Create an Account</button>
+<div class="styless">
+<%= link_to 'Create an Account', new_user_path %> |
+<%= link_to 'Login', root_path %>
+</div>
 </div>

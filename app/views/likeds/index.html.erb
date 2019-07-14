@@ -1,6 +1,12 @@
+<%= stylesheet_link_tag "style.css" %>
+<div class="container">
+<div class="card rounded" style="width: 100%; padding:20px; margin: 20px; background: white">
+  <div class="card-body">
+    <h1 class="card-title">Likes
+</h1>
 <p id="notice"><%= notice %></p>
 
-<h1>Likeds</h1>
+
 
 <table>
   <thead>
@@ -26,4 +32,7 @@
 
 <br>
 
-<%= link_to 'New Liked', new_liked_path %>
+<%= link_to 'New Liked', new_liked_path %> |
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Restaurants', restaurants_path %> |
+<%= link_to 'Events', events_path %>
